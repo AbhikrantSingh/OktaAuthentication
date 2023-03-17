@@ -1,7 +1,9 @@
 @if (User.Identity.IsAuthenticated)
 {
 <ul>
+    <li>@User.Identity.Name</li>
     <li>
+
         <form class="form-inline" asp-controller="Account" asp-action="LogOut" method="post">
             <button type="submit" class="nav-link btn btn-link text-dark" id="logout-button">Sign Out</button>
         </form>
